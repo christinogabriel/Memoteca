@@ -1,0 +1,17 @@
+<button onclick="showSucess()">Clique Aqui</button>
+<h1> Teste de conteúdo</h1>
+<hr>
+<h2 id="memo">{{ title }}</h2>
+
+<div *ngIf="logado;else naologado">
+  Bem vindo ! Você está logado
+</div>
+<ng-template #naologado>
+  você não está logado
+</ng-template>
+
+<ul *ngFor="let usuario of usuarios">
+  <li> {{usuario.id}} - {{usuario.nome}} 
+  </li> 
+</ul>
+<router-outlet></router-outlet>
